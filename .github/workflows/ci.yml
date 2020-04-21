@@ -33,8 +33,11 @@ jobs:
       - name: Current dirrectory
         run: 'pwd'
 
-      - name: Files list
-        run: 'ls -lah'
+#      - name: Files list
+#        run: 'ls -lah'
 
       - name: Test
         run: 'echo $@'
+
+      - name: Checkout
+        uses: actions/checkout@v2

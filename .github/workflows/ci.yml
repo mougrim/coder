@@ -46,7 +46,7 @@ jobs:
         run: |
           git init
           git remote add origin https://github.com/${{ github.repository }}
-          git fetch --no-tags --prune --depth=1 origin +${{ github.sha }}:${{ github.head_ref }}
-          git checkout --progress --force -B ${{ github.ref }} ${{ github.head_ref }}
+          git fetch --no-tags --prune --depth=1 origin +${{ github.sha }}:${{ github.ref }}
+          git checkout --progress --force -B ${{ github.base_ref }} ${{ github.ref }}
           git status
           git log -1

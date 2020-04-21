@@ -27,5 +27,11 @@ jobs:
       - name: Php version
         run: 'php -v'
 
+      - name: Git status
+        run: 'git status'
+
+      - name: Files list
+        run: 'ls -lah'
+
       - name: Test
         run: 'echo $@'

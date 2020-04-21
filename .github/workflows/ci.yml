@@ -36,8 +36,11 @@ jobs:
 #      - name: Files list
 #        run: 'ls -lah'
 
+      - name: Repository
+        run: 'echo ${{ github.repository }}'
+
       - name: Test
         run: 'echo $@'
 
-      - name: Checkout
-        uses: actions/checkout@v2
+#      - name: Checkout
+#        uses: actions/checkout@v2

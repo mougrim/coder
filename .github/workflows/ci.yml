@@ -44,9 +44,15 @@ jobs:
 
       - name: Checkout
         run: |
+          echo "$ git init"
           git init
+          echo "$ git remote add origin https://github.com/${{ github.repository }}"
           git remote add origin https://github.com/${{ github.repository }}
+          echo "$ git fetch --no-tags --prune --depth=1 origin +${{ github.sha }}:${{ github.ref }}"
           git fetch --no-tags --prune --depth=1 origin +${{ github.sha }}:${{ github.ref }}
+          echo "$ git checkout --progress --force ${{ github.sha }}"
           git checkout --progress --force ${{ github.sha }}
+          echo "$ git status"
           git status
+          echo "$ git log -1"
           git log -1

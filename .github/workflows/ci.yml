@@ -26,21 +26,12 @@ jobs:
     steps:
       - name: Php version
         run: 'php -v'
-
-#      - name: Git status
-#        run: 'git status'
-
-      - name: Current dirrectory
-        run: 'pwd'
-
-#      - name: Files list
-#        run: 'ls -lah'
-
-      - name: Repository
-        run: 'echo ${{ github.repository }}'
-
-      - name: Test
-        run: 'echo $@'
+      - name: Php7.3 version
+        run: 'php7.3 -v'
+      - name: Php7.4 version
+        run: 'php7.4 -v'
+      - name: Php8.0 version
+        run: 'php8.0 -v'
 
       - name: Checkout
         run: |

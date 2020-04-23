@@ -30,8 +30,8 @@ jobs:
         run: 'php7.3 -v'
       - name: Php7.4 version
         run: 'php7.4 -v'
-      - name: Php8.0 version
-        run: 'php8.0 -v'
+#      - name: Php8.0 version
+#        run: 'php8.0 -v'
 
       - name: Checkout
         run: |
